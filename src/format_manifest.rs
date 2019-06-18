@@ -8,10 +8,13 @@ pub fn format_manifest(manifest_content: String) -> String
 
     buffer.push_str("[\n");
 
-    let package_list = List::cast(ast.root().inner()).unwrap();
+    let package_list = List::cast(ast.root().inner())
+        .expect("root element is a list");
+
     for package in package_list.items()
     {
-        let set = Set::cast(package).unwrap();
+        let set = Set::cast(package)
+            .expect("list element is a set");
 
         buffer.push_str("  {\n");
 

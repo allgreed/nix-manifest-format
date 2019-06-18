@@ -1,6 +1,6 @@
 [package]
 name = "nix-manifest-format"
-version = "0.2.1"
+version = "0.2.2"
 authors = ["Olgierd \"Allgreed\" Kasprowicz <olixem@gmail.com>"]
 edition = "2018"
 
