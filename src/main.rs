@@ -1,23 +1,22 @@
 use std::fs;
+use std::path::Path;
+
+use dirs::home_dir;
 use rnix::types::*;
 
-// TODO: Unwraps -> expects / sth like that
-// TODO: Accumulate prints and print at the end
-// TODO: Expand home in path
 // TODO: Add tests
+// TODO: Accumulate prints and print at the end
+// TODO: Unwraps -> expects / sth like that
+// TODO: Package via nix
 
 fn main() {
-    let file = "/home/allgreed/.nix-profile/manifest.nix";
 
-    let content = match fs::read_to_string(file) {
-        Ok(content) => content,
-        Err(err) => {
-            eprintln!("error reading file: {}", err);
-            return;
-        }
-    };
+    let home_dir = home_dir().unwrap();
+    let manifest_relative_location = Path::new(".nix-profile/manifest.nix");
 
+    let content = fs::read_to_string(home_dir.join(manifest_relative_location)).unwrap();
     let ast = rnix::parse(&content);
+
     let package_list = List::cast(ast.root().inner()).unwrap();
 
     println!("[");

@@ -1,8 +1,9 @@
 [package]
 name = "nix-parser"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Olgierd \"Allgreed\" Kasprowicz <olixem@gmail.com>"]
 edition = "2018"
 
 [dependencies]
 rnix = { git = "https://gitlab.com/jD91mZM2/rnix", rev = "93ded1c5f2c6ed0b8cc8396c1834bb901ccdd93c" }
+dirs = "2.0.1"
