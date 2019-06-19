@@ -1,4 +1,5 @@
 mod format_manifest;
+mod format_manifest_test;
 
 use std::fs;
 use std::path::Path;
