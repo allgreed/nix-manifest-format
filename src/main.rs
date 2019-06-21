@@ -9,6 +9,7 @@ use dirs::home_dir;
 use format_manifest::format_manifest;
 
 // TODO: Package via nix
+// https://www.hadean.com/blog/managing-rust-dependencies-with-nix-part-i
 
 fn main()
 {

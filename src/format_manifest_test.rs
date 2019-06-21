@@ -11,6 +11,29 @@ fn check_single_entry()
 }
 
 #[test]
+fn order_packages()
+{
+    let input = "[ { name = b; prop = value; } {name = c;  prop = value; } { name = a; prop = value; } ]";
+    let output = r###"[
+  {
+    name = a;
+    prop = value;
+  }
+  {
+    name = b;
+    prop = value;
+  }
+  {
+    name = c;
+    prop = value;
+  }
+]
+"###;
+
+    assert_eq!(format_manifest(String::from(input)), String::from(output));
+}
+
+#[test]
 fn check_many_entries()
 {
     let input = "[ { a = ble; c = ble; d = ble; e = ble; meta = { ble }; } ]";
