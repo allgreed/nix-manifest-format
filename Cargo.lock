@@ -145,7 +145,7 @@ dependencies = [
 
 [[package]]
 name = "nix-manifest-format"
-version = "0.3.0"
+version = "0.3.1"
 dependencies = [
  "dirs 2.0.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "rnix 0.6.0 (git+https://gitlab.com/jD91mZM2/rnix?rev=93ded1c5f2c6ed0b8cc8396c1834bb901ccdd93c)",
