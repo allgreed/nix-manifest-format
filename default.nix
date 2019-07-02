@@ -2,13 +2,13 @@
 
 rustPlatform.buildRustPackage rec {
   name = "nix-manifest-format-${version}";
-  version = "0.3.0";
+  version = "0.3.1";
 
   src = fetchFromGitHub {
     owner = "allgreed";
     repo = "nix-manifest-format";
     rev = "${version}";
-    sha256 = "1bm13gwvhbdhljnnsfprfkac0ahgq68xn8wx84xrjnn88pyj2x34";
+    sha256 = "01kwb4my0p0p75pa0rlkx3lagly0ng7yfqx4lf27r8h02y4lnf5w";
   };
 
   cargoSha256 = "1i5q0asq4k2hv07f6253yrwbcj22msxv6lagx4fz054sjn1m34j6";
